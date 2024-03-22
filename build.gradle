@@ -1,0 +1,12 @@
+apply from: 'aws.gradle'
+allprojects {
+    repositories {
+        maven {
+            url "https://<readacted>.<readacted>.amazonaws.com/maven/packages/"
+            credentials {
+                username getAWSCodeArtifactUsername()
+                password getAWSCodeArtifactToken()
+            }
+        }
+    }
+}

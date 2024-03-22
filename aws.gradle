@@ -1,0 +1,17 @@
+ext.getAWSCodeArtifactUsername = {
+    try {
+        println System.getenv()
+        return getProperty("aws.codeartifact.username")
+    } catch (Exception ignored) {
+        return System.getenv("AWS_CODEARTIFACT_USERNAME")
+    }
+}
+
+ext.getAWSCodeArtifactToken = {
+    try {
+        println System.getenv()
+        return getProperty("aws.codeartifact.token")
+    } catch (Exception ignored) {
+        return System.getenv("AWS_CODEARTIFACT_TOKEN")
+    }
+}
